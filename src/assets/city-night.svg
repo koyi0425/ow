@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#071018"/>
+      <stop offset="0.55" stop-color="#0b1522"/>
+      <stop offset="1" stop-color="#0a1220"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="20%" r="60%">
+      <stop offset="0" stop-color="#1b4b7a" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.45"/>
+    </linearGradient>
+    <pattern id="stars" width="120" height="120" patternUnits="userSpaceOnUse">
+      <circle cx="18" cy="22" r="1.2" fill="#ffffff" opacity="0.35"/>
+      <circle cx="74" cy="28" r="1.0" fill="#ffffff" opacity="0.26"/>
+      <circle cx="42" cy="78" r="0.9" fill="#ffffff" opacity="0.22"/>
+      <circle cx="98" cy="92" r="1.1" fill="#ffffff" opacity="0.25"/>
+      <circle cx="110" cy="54" r="0.8" fill="#ffffff" opacity="0.20"/>
+    </pattern>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="520" fill="url(#glow)"/>
+  <rect width="1600" height="520" fill="url(#stars)" opacity="0.6"/>
+
+  <!-- Far buildings -->
+  <g opacity="0.65" fill="#0b1a2a">
+    <rect x="60" y="430" width="120" height="260" rx="6"/>
+    <rect x="200" y="380" width="140" height="310" rx="6"/>
+    <rect x="360" y="410" width="110" height="280" rx="6"/>
+    <rect x="490" y="360" width="160" height="330" rx="6"/>
+    <rect x="680" y="400" width="140" height="290" rx="6"/>
+    <rect x="850" y="370" width="180" height="320" rx="6"/>
+    <rect x="1060" y="420" width="130" height="270" rx="6"/>
+    <rect x="1210" y="390" width="170" height="300" rx="6"/>
+    <rect x="1410" y="440" width="140" height="250" rx="6"/>
+  </g>
+
+  <!-- Window dots -->
+  <g fill="#ffd36a" opacity="0.18">
+    <circle cx="110" cy="470" r="2"/><circle cx="140" cy="500" r="2"/><circle cx="95" cy="530" r="2"/>
+    <circle cx="250" cy="430" r="2"/><circle cx="285" cy="455" r="2"/><circle cx="315" cy="490" r="2"/>
+    <circle cx="540" cy="420" r="2"/><circle cx="585" cy="450" r="2"/><circle cx="615" cy="520" r="2"/>
+    <circle cx="910" cy="420" r="2"/><circle cx="960" cy="450" r="2"/><circle cx="1000" cy="520" r="2"/>
+    <circle cx="1280" cy="450" r="2"/><circle cx="1325" cy="480" r="2"/><circle cx="1360" cy="520" r="2"/>
+    <circle cx="1480" cy="500" r="2"/><circle cx="1510" cy="540" r="2"/><circle cx="1450" cy="570" r="2"/>
+  </g>
+
+  <!-- Near skyline silhouette -->
+  <path d="M0 640
+           L0 900 L1600 900 L1600 650
+           L1500 650 L1500 560 L1420 560 L1420 650
+           L1320 650 L1320 520 L1240 520 L1240 650
+           L1120 650 L1120 500 L1040 500 L1040 650
+           L920 650 L920 540 L860 540 L860 650
+           L740 650 L740 470 L680 470 L680 650
+           L560 650 L560 520 L500 520 L500 650
+           L380 650 L380 560 L320 560 L320 650
+           L210 650 L210 520 L150 520 L150 650
+           L0 650 Z"
+        fill="#06101a" opacity="0.95"/>
+
+  <!-- Bottom haze -->
+  <rect y="520" width="1600" height="380" fill="url(#haze)"/>
+</svg>
