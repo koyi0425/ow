@@ -26,7 +26,6 @@
             </div>
 
             <div class="actions">
-              <el-button type="primary" size="large" @click="contactSupplier">Contact Supplier</el-button>
               <el-button size="large" @click="goBack">Back to Products</el-button>
             </div>
           </div>
@@ -55,12 +54,6 @@ export default {
     }
   },
   methods: {
-    contactSupplier() {
-      this.$message({
-        message: 'Contact information will be sent to your email',
-        type: 'success'
-      })
-    },
     goBack() {
       this.$router.push('/products')
     }
@@ -133,6 +126,7 @@ h1 {
   margin-top: 30px;
   display: flex;
   gap: 20px;
+  justify-content: flex-end;
 }
 
 @media (max-width: 768px) {

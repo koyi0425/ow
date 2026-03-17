@@ -30,7 +30,44 @@
                     </el-dropdown-menu>
                 </el-dropdown>
             </div>
+
+            <!-- 移动端菜单按钮 -->
+            <el-button class="mobile-menu-btn" icon="el-icon-menu" @click="mobileMenuOpen = true" circle></el-button>
         </div>
+
+        <!-- 移动端抽屉菜单 -->
+        <el-drawer class="mobile-drawer" :visible.sync="mobileMenuOpen" direction="rtl" size="78%"
+            :with-header="false" :append-to-body="true" :modal-append-to-body="true" :lock-scroll="false"
+            :close-on-press-escape="true" :wrapper-closable="true">
+            <div class="mobile-drawer__content">
+                <div class="mobile-drawer__top">
+                    <div class="mobile-drawer__title">Menu</div>
+                    <el-button icon="el-icon-close" @click="mobileMenuOpen = false" circle></el-button>
+                </div>
+
+                <el-menu :default-active="activeIndex" class="mobile-nav" mode="vertical" @select="handleMobileSelect"
+                    router>
+                    <el-menu-item index="/">Home</el-menu-item>
+                    <el-menu-item index="/products">Products</el-menu-item>
+                    <el-menu-item index="/about">About Us</el-menu-item>
+                    <el-menu-item index="/contact">Contact</el-menu-item>
+                </el-menu>
+
+                <div class="mobile-language">
+                    <div class="mobile-language__label">Language</div>
+                    <el-dropdown trigger="click" @command="handleLanguageChange">
+                        <span class="el-dropdown-link">
+                            {{ currentLanguage }}<i class="el-icon-arrow-down el-icon--right"></i>
+                        </span>
+                        <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item command="en">English</el-dropdown-item>
+                            <el-dropdown-item command="zh">中文</el-dropdown-item>
+                            <el-dropdown-item command="es">Español</el-dropdown-item>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </div>
+            </div>
+        </el-drawer>
     </header>
 </template>
 
@@ -40,7 +77,8 @@ export default {
     data() {
         return {
             activeIndex: '/',
-            currentLanguage: 'English'
+            currentLanguage: 'English',
+            mobileMenuOpen: false,
         }
     },
     watch: {
@@ -54,6 +92,10 @@ export default {
     methods: {
         handleSelect(key) {
             this.activeIndex = key
+        },
+        handleMobileSelect(key) {
+            this.activeIndex = key
+            this.mobileMenuOpen = false
         },
         handleLanguageChange(command) {
             this.currentLanguage = command === 'en' ? 'English' :
@@ -134,6 +176,11 @@ export default {
     margin-left: 20px;
 }
 
+.mobile-menu-btn {
+    display: none;
+    margin-left: 10px;
+}
+
 .el-dropdown-link {
     cursor: pointer;
     color: #333;
@@ -142,14 +189,71 @@ export default {
 
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
+        height: 64px;
+        padding: 0 12px;
     }
 
-    .main-nav {
-        margin: 10px 0;
-        width: 100%;
+    .company-name {
+        font-size: 16px;
+        max-width: 185px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
+
+    .logo {
+        width: 38px;
+        height: 38px;
+        margin-right: 10px;
+    }
+
+    .main-nav,
+    .language-switch {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: inline-flex;
+    }
+}
+
+.mobile-drawer__content {
+    padding: 18px 16px 22px;
+}
+
+.mobile-drawer__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.mobile-drawer__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.mobile-nav {
+    border-right: none;
+}
+
+.mobile-nav .el-menu-item {
+    height: 48px;
+    line-height: 48px;
+}
+
+.mobile-language {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.mobile-language__label {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 8px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 </style>

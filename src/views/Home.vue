@@ -86,16 +86,20 @@
               businesses worldwide.</p>
             <div class="stats-container">
               <div class="stat-item">
-                <span class="stat-number">20+</span>
-                <span class="stat-label">Years Experience</span>
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Years</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number">50+</span>
+                <span class="stat-number">20+</span>
                 <span class="stat-label">Countries</span>
               </div>
               <div class="stat-item">
                 <span class="stat-number">1000+</span>
-                <span class="stat-label">Happy Clients</span>
+                <span class="stat-label">Clients</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">7×24h</span>
+                <span class="stat-label">Support</span>
               </div>
             </div>
             <el-button type="primary" size="large" @click="$router.push('/about')">Learn More About Us</el-button>
@@ -201,8 +205,8 @@ export default {
   computed: {
     ...mapGetters(['getProducts']),
     featuredProducts() {
-      // 首页产品中心展示 3 行，每行 4 个，共 12 个产品
-      return this.getProducts.slice(0, 12)
+      // 首页产品中心展示 2 行，每行 4 个，共 8 个产品
+      return this.getProducts.slice(0, 8)
     }
   },
   methods: {
@@ -490,13 +494,11 @@ body {
   inset: 0;
   pointer-events: none;
   background-image:
-    repeating-linear-gradient(
-      135deg,
+    repeating-linear-gradient(135deg,
       rgba(0, 0, 0, 0.06) 0,
       rgba(0, 0, 0, 0.06) 1px,
       rgba(255, 255, 255, 0.0) 1px,
-      rgba(255, 255, 255, 0.0) 10px
-    );
+      rgba(255, 255, 255, 0.0) 10px);
   opacity: 0.25;
 }
 

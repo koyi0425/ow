@@ -32,6 +32,7 @@ export default new Vuex.Store({
             id: 1,
             name: "Shield Woven Label",
             category: "Woven Label",
+            series: "系列一",
             price: 0,
             description: "Custom shield woven label for garments and uniforms",
             image:
@@ -42,6 +43,7 @@ export default new Vuex.Store({
             id: 2,
             name: "Garment Woven Label",
             category: "Woven Label",
+            series: "系列一",
             price: 0,
             description: "High quality woven label for fashion garments",
             image:
@@ -52,6 +54,7 @@ export default new Vuex.Store({
             id: 3,
             name: "Neck Woven Label",
             category: "Woven Label",
+            series: "系列一",
             price: 0,
             description: "Soft woven neck label for clothing brands",
             image:
@@ -62,6 +65,7 @@ export default new Vuex.Store({
             id: 4,
             name: "Folded Woven Label",
             category: "Woven Label",
+            series: "系列二",
             price: 0,
             description: "Two-side folded woven label for garments",
             image:
@@ -72,6 +76,7 @@ export default new Vuex.Store({
             id: 5,
             name: "Brand Woven Patch",
             category: "Woven Patch",
+            series: "系列二",
             price: 0,
             description: "Durable woven patch for branding",
             image:
@@ -82,6 +87,7 @@ export default new Vuex.Store({
             id: 6,
             name: "Rectangle Woven Label",
             category: "Woven Label",
+            series: "系列二",
             price: 0,
             description: "Rectangle woven label for bags and apparel",
             image:
@@ -92,6 +98,7 @@ export default new Vuex.Store({
             id: 7,
             name: "Kids Garment Label",
             category: "Woven Label",
+            series: "系列三",
             price: 0,
             description: "Colorful woven label for kidswear",
             image:
@@ -102,6 +109,7 @@ export default new Vuex.Store({
             id: 8,
             name: "Sportswear Label",
             category: "Woven Label",
+            series: "系列三",
             price: 0,
             description: "Breathable woven label for sportswear",
             image:
@@ -112,6 +120,7 @@ export default new Vuex.Store({
             id: 9,
             name: "Denim Woven Patch",
             category: "Woven Patch",
+            series: "系列三",
             price: 0,
             description: "Classic woven patch for denim products",
             image:
@@ -122,6 +131,7 @@ export default new Vuex.Store({
             id: 10,
             name: "Luxury Garment Label",
             category: "Woven Label",
+            series: "系列一",
             price: 0,
             description: "Fine woven label for luxury garments",
             image:
@@ -132,6 +142,7 @@ export default new Vuex.Store({
             id: 11,
             name: "Minimal Woven Label",
             category: "Woven Label",
+            series: "系列二",
             price: 0,
             description: "Simple and elegant woven label design",
             image:
@@ -142,6 +153,7 @@ export default new Vuex.Store({
             id: 12,
             name: "Custom Shape Label",
             category: "Woven Label",
+            series: "系列三",
             price: 0,
             description: "Custom shaped woven label for special designs",
             image:
