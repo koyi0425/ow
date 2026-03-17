@@ -4,6 +4,6 @@ module.exports = defineConfig({
   lintOnSave: false,
   publicPath:
     process.env.NODE_ENV === "production"
-      ? "/foreign-trade-website/" // 替换为你的仓库名
+      ? "/ow/"
       : "/",
 });
