@@ -634,5 +634,9 @@ body {
     padding-right: 0;
     margin-bottom: 30px;
   }
+
+  .stat-number {
+    font-size: 24px;
+  }
 }
 </style>
